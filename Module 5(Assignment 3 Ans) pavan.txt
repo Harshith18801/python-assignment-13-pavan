@@ -1,0 +1,65 @@
+
+
+                                  Module 5
+
+                              Python Assignment
+
+
+                                                            Datta M Pavan 
+                                                            321910302020
+
+
+1.    Write a program to get the 4th element and 4th element from last of a tuple.
+Ans:  #Get an item of the tuple
+tuplex = ("w", 3, "r", "e", "s", "o", "u", "r", "c", "e")
+print(tuplex)
+#Get item (4th element)of the tuple by index
+item = tuplex[3]
+print(item)
+#Get item (4th element from last)by index negative
+item1 = tuplex[-4]
+print(item1)
+
+
+2.    Write a python program to create the colon of a tuple.
+Ans:  from copy import deepcopy
+#create a tuple
+tuplex = ("HELLO", 5, [], True) 
+print(tuplex)
+#make a copy of a tuple using deepcopy() function
+tuplex_colon = deepcopy(tuplex)
+tuplex_colon[2].append(50)
+print(tuplex_colon)
+print(tuplex)
+
+
+3.    Write a python program to find the repeated items of a tuple.
+Ans:  #create a tuple
+tuplex = 2, 4, 5, 6, 2, 3, 4, 4, 7 
+print(tuplex)
+#return the number of times it appears in the tuple.
+count = tuplex.count(4)
+print(count)
+
+
+4.    Write a python program to remove an item from a tuple.
+Ans:  #create a tuple
+tuplex = "w", 3, "r", "s", "o", "u", "r", "c", "e"
+print(tuplex)
+#tuples are immutable, so you can not remove elements
+#using merge of tuples with the + operator you can remove an item and it will create a new tuple
+tuplex = tuplex[:2] + tuplex[3:]
+print(tuplex)
+#converting the tuple to list
+listx = list(tuplex) 
+#use different ways to remove an item of the list
+listx.remove("c") 
+#converting the tuple to list
+tuplex = tuple(listx)
+print(tuplex)
+
+
+5.    Write a python program to check whether an item exists within a tuple.
+Ans:  tuplex = ("w", 3, "r", "e", "s", "o", "u", "r", "c", "e")
+print("r" in tuplex)
+print(5 in tuplex)
